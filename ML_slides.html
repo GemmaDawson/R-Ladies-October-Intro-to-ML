@@ -1,27 +1,29 @@
----
-title: "Intro to Machine Learning"
-subtitle: "Using the R Programming Language"
-author: "<br><br>Gemma Dawson"
-date: "<br><br>12 October 2018"
-output:
-  xaringan::moon_reader:
-    chakra: libs/remark-latest.min.js
-    lib_dir: libs
-    css: ["assets/kunoichi.css", "assets/ninpo.css", "assets/ninjutsu.css"]
-    seal: true 
-    self_contained: false
-    incremental: true
-    nature:
-      ratio: "16:9"
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to Machine Learning</title>
+    <meta charset="utf-8">
+    <meta name="author" content="  Gemma Dawson" />
+    <meta name="date" content="2018-10-12" />
+    <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="assets/kunoichi.css" type="text/css" />
+    <link rel="stylesheet" href="assets/ninpo.css" type="text/css" />
+    <link rel="stylesheet" href="assets/ninjutsu.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Intro to Machine Learning
+## Using the R Programming Language
+### <br><br>Gemma Dawson
+### <br><br>12 October 2018
 
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
+
+
 
 layout: false
 class: split-70 hide-slide-number
@@ -31,13 +33,13 @@ background-size: cover
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_Icepackblue.left[
   .font5[Gemma Dawson]
-    <img src="images/icepack_white.png" width="70%"><br>
+    &lt;img src="images/icepack_white.png" width="70%"&gt;&lt;br&gt;
 ]]
 
 .column[.content.vmiddle.right[
-### .Icepackblue[`r anicon::faa("laptop", animate="float")`  www.icepack.ai]
-### .Icepackblue[`r anicon::faa("github", animate="float")`  @GemmaDawson]
-### .Icepackblue[`r anicon::faa("twitter", animate="float")`  @gemmadawsonza]
+### .Icepackblue[<span>&lt;i class="fas  fa-laptop faa-float animated "&gt;&lt;/i&gt;</span>  www.icepack.ai]
+### .Icepackblue[<span>&lt;i class="fab  fa-github faa-float animated "&gt;&lt;/i&gt;</span>  @GemmaDawson]
+### .Icepackblue[<span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>  @gemmadawsonza]
 ]]
 
 ---
@@ -57,7 +59,7 @@ background-size: cover
 layout: false
 class: middle center .bg-white
 # .ORSSAred[All Nobel Laureates]
-<img src="images/Nobel1.png" width="95%">
+&lt;img src="images/Nobel1.png" width="95%"&gt;
 
 ???
 Established in 1895 by Alfred Nobel, the inventor of dynamite, the prizes were first awarded in 1901 for Chemistry, Literature, Peace, Physics and Physiology or Medicine.  The prize for Economic Sciences was established in 1968 with the first prize being awarded the following year.
@@ -70,7 +72,7 @@ Four people have been honoured twice while two organisations have received multi
 layout: false
 class: middle center .bg-white
 # .ORSSAred[Nobel Prizes Awarded to People]
-<img src="images/Nobel2.png" width="95%">
+&lt;img src="images/Nobel2.png" width="95%"&gt;
 
 ???
 Removing the colour from the dots representing organisations from the picture, 327 people have been the sole reciepent of the award and the remaining 577 have shared the award.  The average age of a Nobel winner is 60 years old with the youngest being 17 and the oldest 90.
@@ -80,7 +82,7 @@ Removing the colour from the dots representing organisations from the picture, 3
 layout: false
 class: middle center .bg-white
 # .ORSSAred[Nobel Prizes Awarded to Women]
-<img src="images/Nobel3.png" width="95%">
+&lt;img src="images/Nobel3.png" width="95%"&gt;
 
 ???
 Now removing the colour from the dots representing male winners, we can see that only 50 women have received a Nobel Prize over its history.  This represents 5% of the total winners.
@@ -92,7 +94,7 @@ Marie Curie was the first, winning the Physics prize in 1903 which she shared wi
 layout: false
 class: middle center .bg-white
 # .ORSSAred[Nobel Prizes Awarded to People Born in Africa]
-<img src="images/Nobel6.png" width="95%">
+&lt;img src="images/Nobel6.png" width="95%"&gt;
 
 ???
 The first prize awarded to an African was given to Max Theiler for his work in developing a yellow fever vaccination.  The first black African to receieve the award was Albert Luthuli in 1960.  The first black African woman, Wangari Maathai from Kenya received her award for peace in 2004.  And the lastest receiptient is the first from the Congo, Denis Mukwege was awarded the Nobel Peace Prize just last week.  You may also notice that an African has never received the economics award.
@@ -102,7 +104,7 @@ The first prize awarded to an African was given to Max Theiler for his work in d
 layout: false
 class: middle center .bg-white
 # .ORSSAred[STEM Nobel Prizes Awarded to People]
-<img src="images/Nobel4.png" width="95%">
+&lt;img src="images/Nobel4.png" width="95%"&gt;
 
 ???
 
@@ -113,7 +115,7 @@ Let's focus on the three STEM categories, chemistry
 layout: false
 class: middle center .bg-white
 # .ORSSAred[STEM Nobel Prizes Awarded to Women]
-<img src="images/Nobel5.png" width="95%">
+&lt;img src="images/Nobel5.png" width="95%"&gt;
 
 ???
 Only three women have been awarded individual awards, Marie Curie, Dorothy Hodgkin (chemistry), and Barbara McClintock (physiology or medicine).  
@@ -124,7 +126,7 @@ This year, Donna Strickland became the third women to be awarded the Physics Nob
 layout: false
 class: middle center .bg-white
 # .ORSSAred[STEM Nobel Prizes Awarded to People Born in Africa]
-<img src="images/Nobel7.png" width="95%">
+&lt;img src="images/Nobel7.png" width="95%"&gt;
 
 ???
 
@@ -133,8 +135,8 @@ class: middle center .bg-white
 layout: false
 class: middle center bg-main1
 
-<img src="images/BeyondCurieLogo.png" width="100%">
-.font3[a design project that highlights badass women in science, technology, engineering & mathematics]
+&lt;img src="images/BeyondCurieLogo.png" width="100%"&gt;
+.font3[a design project that highlights badass women in science, technology, engineering &amp; mathematics]
 
 ---
 
@@ -143,7 +145,7 @@ class: split-two
 
 .column.bg-white[.content.vmiddle.center[
  {{content}}
- <img src="images/BeyondCurieLogo.png" width="55%">
+ &lt;img src="images/BeyondCurieLogo.png" width="55%"&gt;
 ]]
 
 .column.bg-main5[.split-five[
@@ -169,7 +171,7 @@ class: split-two
 
 class: hide-row2-col2 hide-row3-col2 hide-row4-col2 hide-row5-col2
 
-<img src="images/jocelyn_bell_burnell.png" width="90%">
+&lt;img src="images/jocelyn_bell_burnell.png" width="90%"&gt;
 
 ???
 1943 - present
@@ -183,7 +185,7 @@ Dame Susan Jocelyn Bell Burnell, at 24, as a post-graduate student at the Univer
 
 class: fade-row1-col2 hide-row3-col2 hide-row4-col2 hide-row5-col2
 
-<img src="images/rosalind_franklin.png" width="90%">
+&lt;img src="images/rosalind_franklin.png" width="90%"&gt;
 
 ???
 1920 - 1958
@@ -195,7 +197,7 @@ Rosalind Franklin is the dame of DNA. Born in 1920, she used X-ray diffraction t
 
 class: fade-row1-col2 fade-row2-col2 hide-row4-col2 hide-row5-col2
 
-<img src="images/esther_lederberg.png" width="90%">
+&lt;img src="images/esther_lederberg.png" width="90%"&gt;
 
 ???
 1922 - 2006
@@ -206,7 +208,7 @@ Esther Lederberg was an American microbiologist and pioneer of bacterial genetic
 
 class: fade-row1-col2 fade-row2-col2 fade-row3-col2  hide-row5-col2
 
-<img src="images/lise_meitner.png" width="90%">
+&lt;img src="images/lise_meitner.png" width="90%"&gt;
 
 
 ???
@@ -220,7 +222,7 @@ In 1939, Meitner along with her nephew, Otto Frisch, discovered nuclear fission,
 
 class: fade-row1-col2 fade-row2-col2 fade-row3-col2 fade-row4-col2
 
-<img src="images/chen_shiung.gif" width="90%">
+&lt;img src="images/chen_shiung.gif" width="90%"&gt;
 
 ???
 1912 - 1997
@@ -289,21 +291,21 @@ class: hide-row2-col1 hide-row2-col2
 class: hide-row2-col2
 count: false
 
-<h1 style="color:#562457";>The field of study that gives computers the ability to learn without being explicitly programmed.</h1>
+&lt;h1 style="color:#562457";&gt;The field of study that gives computers the ability to learn without being explicitly programmed.&lt;/h1&gt;
 
 ---
 
 class: hide-row2-col2
 count: false
 
-<h1 style="color:#562457";>The field of study that gives computers the ability to learn <strong>without being explicitly programmed</strong>.</h1>
+&lt;h1 style="color:#562457";&gt;The field of study that gives computers the ability to learn &lt;strong&gt;without being explicitly programmed&lt;/strong&gt;.&lt;/h1&gt;
 
 
 ---
 
 count: false
 
-<h1  style="color:#562457";>The field of study that gives computers the ability to learn <strong>without being explicitly programmed</strong>.</h1>
+&lt;h1  style="color:#562457";&gt;The field of study that gives computers the ability to learn &lt;strong&gt;without being explicitly programmed&lt;/strong&gt;.&lt;/h1&gt;
 
 ---
 
@@ -353,7 +355,7 @@ class: split-20
 
 .row[.content.vmiddle.center[
 # .RLadiesPurple[**GOAL**: create a predictive model]
-<img src="images/supervised.png" width="55%">
+&lt;img src="images/supervised.png" width="55%"&gt;
 ]]
 
 ???
@@ -374,14 +376,14 @@ class: split-20
 
 .row[.content[.split-two[
   .column[.content.vtop.center[
-  .RLadiesPurple[.font2[Regression]]<br>
-  <br>
-  <img src="images/super-regression.png" width="75%">
+  .RLadiesPurple[.font2[Regression]]&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src="images/super-regression.png" width="75%"&gt;
   ]]
   .column[.content.vtop.center[
-  .RLadiesPurple[.font2[Classification]]<br>
-  <br>
-  <img src="images/super-class.png" width="75%">
+  .RLadiesPurple[.font2[Classification]]&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src="images/super-class.png" width="75%"&gt;
   ]]
   ]]]
 
@@ -393,7 +395,7 @@ class: split-20
 
 #regression
 - linear regression
-- decison trees & random forest
+- decison trees &amp; random forest
 
 ---
 
@@ -419,7 +421,7 @@ class: split-20
 
 .row[.content.vmiddle.center[
 # .RLadiesPurple[**GOAL**: create a descriptive model]
-<img src="images/unsupervised.jpeg" width="55%">
+&lt;img src="images/unsupervised.jpeg" width="55%"&gt;
 ]]
 
 ???
@@ -437,9 +439,9 @@ class: split-20
 ]]
 
 .row[.content.vtop.center[
-  .RLadiesPurple[.font2[Clustering]]<br>
-  <br>
-  <img src="images/unsuper.png" width="38%">
+  .RLadiesPurple[.font2[Clustering]]&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src="images/unsuper.png" width="38%"&gt;
   ]]
   
 ---
@@ -450,7 +452,7 @@ background-size: cover
 
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_main.left[
-.font5[Programming Basics]<br>
+.font5[Programming Basics]&lt;br&gt;
 .font3[R Language]]]
 .column[
 ]
@@ -465,8 +467,13 @@ class: split-20
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     1 + 3
+```
+
+```
+## [1] 4
 ```
   ]]
 
@@ -484,9 +491,21 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     1 + 3
+```
+
+```
+## [1] 4
+```
+
+```r
     1:5
+```
+
+```
+## [1] 1 2 3 4 5
 ```
   ]]
 
@@ -504,11 +523,30 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     1 + 3
+```
+
+```
+## [1] 4
+```
+
+```r
     1:5
+```
+
+```
+## [1] 1 2 3 4 5
+```
+
+```r
     1:5*2
 ```
+
+```
+## [1]  2  4  6  8 10
+```
   ]]
 
 
@@ -524,8 +562,9 @@ class: split-20
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    x <- 10 - 8
+
+```r
+    x &lt;- 10 - 8
 ```
   ]]
 
@@ -543,10 +582,15 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    x <- 10 - 8
+
+```r
+    x &lt;- 10 - 8
 
     x
+```
+
+```
+## [1] 2
 ```
   ]]
 
@@ -564,12 +608,19 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    x <- 10 - 8
+
+```r
+    x &lt;- 10 - 8
 
     x
-    
-    y <- 1:15
+```
+
+```
+## [1] 2
+```
+
+```r
+    y &lt;- 1:15
 ```
   ]]
 
@@ -587,15 +638,26 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    x <- 10 - 8
+
+```r
+    x &lt;- 10 - 8
 
     x
-    
-    y <- 1:15
+```
+
+```
+## [1] 2
+```
+
+```r
+    y &lt;- 1:15
     
     y
 ```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
   ]]
 
 
@@ -612,17 +674,34 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    x <- 10 - 8
+
+```r
+    x &lt;- 10 - 8
 
     x
-    
-    y <- 1:15
+```
+
+```
+## [1] 2
+```
+
+```r
+    y &lt;- 1:15
     
     y
-    
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+```r
     ls()
 ```
+
+```
+## [1] "x" "y"
+```
   ]]
 
 
@@ -638,8 +717,13 @@ class: split-20
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     y
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
 ```
   ]]
 
@@ -657,10 +741,17 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    y
 
-    z <-  y ^ x
+```r
+    y
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+```r
+    z &lt;-  y ^ x
 ```
   ]]
 
@@ -678,37 +769,23 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    y
 
-    z <-  y ^ x
+```r
+    y
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+```r
+    z &lt;-  y ^ x
     
     z
 ```
-  ]]
 
-
-???
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Assignment]
-]]
-
-.row.bg-black[.content.left[
-```{r}
-    y
-
-    z <-  y ^ x
-    
-    z
-    
-    y <- y ^ x
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
 ```
   ]]
 
@@ -726,19 +803,72 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r echo= FALSE}
-y <- 1:15
-```
-```{r}
-    y
 
-    z <-  y ^ x
+```r
+    y
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+```r
+    z &lt;-  y ^ x
     
     z
+```
+
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
+```
+
+```r
+    y &lt;- y ^ x
+```
+  ]]
+
+
+???
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Assignment]
+]]
+
+.row.bg-black[.content.left[
+
+
+```r
+    y
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+```
+
+```r
+    z &lt;-  y ^ x
     
-    y <- y ^ x
+    z
+```
+
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
+```
+
+```r
+    y &lt;- y ^ x
     
     y
+```
+
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
 ```
   ]]
 
@@ -755,8 +885,13 @@ class: split-20
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     Sys.time()
+```
+
+```
+## [1] "2018-10-21 10:49:25 SAST"
 ```
 ]]
 
@@ -774,10 +909,21 @@ conut: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    Sys.time()
 
+```r
+    Sys.time()
+```
+
+```
+## [1] "2018-10-21 10:49:25 SAST"
+```
+
+```r
     seq(from = 1, to = 15, by = 3)
+```
+
+```
+## [1]  1  4  7 10 13
 ```
 ]]
 
@@ -795,13 +941,25 @@ conut: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     Sys.time()
+```
 
+```
+## [1] "2018-10-21 10:49:25 SAST"
+```
+
+```r
     seq(from = 1, to = 15, by = 3)
-    
-    my_sequence <- seq(from = 1, to = 15, by = 3)
+```
 
+```
+## [1]  1  4  7 10 13
+```
+
+```r
+    my_sequence &lt;- seq(from = 1, to = 15, by = 3)
 ```
 ]]
 
@@ -819,15 +977,32 @@ conut: false
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    Sys.time()
 
+```r
+    Sys.time()
+```
+
+```
+## [1] "2018-10-21 10:49:25 SAST"
+```
+
+```r
     seq(from = 1, to = 15, by = 3)
-    
-    my_sequence <- seq(from = 1, to = 15, by = 3)
+```
+
+```
+## [1]  1  4  7 10 13
+```
+
+```r
+    my_sequence &lt;- seq(from = 1, to = 15, by = 3)
 
     median(my_sequence)
 ```
+
+```
+## [1] 7
+```
 ]]
 
 
@@ -843,8 +1018,9 @@ class: split-20
 ]]
 
 .row.bg-black[.content[
-```{r}
-    my_text <- tolower("WHY ARE YOU SHOUTING?")
+
+```r
+    my_text &lt;- tolower("WHY ARE YOU SHOUTING?")
 ```
 ]]
 
@@ -862,10 +1038,15 @@ count: false
 ]]
 
 .row.bg-black[.content[
-```{r}
-    my_text <- tolower("WHY ARE YOU SHOUTING?")
+
+```r
+    my_text &lt;- tolower("WHY ARE YOU SHOUTING?")
 
     my_text
+```
+
+```
+## [1] "why are you shouting?"
 ```
 ]]
 
@@ -883,12 +1064,19 @@ count: false
 ]]
 
 .row.bg-black[.content[
-```{r}
-    my_text <- tolower("WHY ARE YOU SHOUTING?")
+
+```r
+    my_text &lt;- tolower("WHY ARE YOU SHOUTING?")
 
     my_text
-    
-    text_vector <- c("one", "two", "three", "Four", "fiVE")
+```
+
+```
+## [1] "why are you shouting?"
+```
+
+```r
+    text_vector &lt;- c("one", "two", "three", "Four", "fiVE")
 ```
 ]]
 
@@ -906,15 +1094,26 @@ count: false
 ]]
 
 .row.bg-black[.content[
-```{r}
-    my_text <- tolower("WHY ARE YOU SHOUTING?")
+
+```r
+    my_text &lt;- tolower("WHY ARE YOU SHOUTING?")
 
     my_text
-    
-    text_vector <- c("one", "TWO", "thrEe", "Four", "fiVE")
+```
+
+```
+## [1] "why are you shouting?"
+```
+
+```r
+    text_vector &lt;- c("one", "TWO", "thrEe", "Four", "fiVE")
     
     grepl(x = text_vector, pattern = "two")
 ```
+
+```
+## [1] FALSE FALSE FALSE FALSE FALSE
+```
 ]]
 
 
@@ -931,16 +1130,33 @@ count: false
 ]]
 
 .row.bg-black[.content[
-```{r}
-    my_text <- tolower("WHY ARE YOU SHOUTING?")
+
+```r
+    my_text &lt;- tolower("WHY ARE YOU SHOUTING?")
 
     my_text
-    
-    text_vector <- c("one", "TWO", "thrEe", "Four", "fiVE")
+```
+
+```
+## [1] "why are you shouting?"
+```
+
+```r
+    text_vector &lt;- c("one", "TWO", "thrEe", "Four", "fiVE")
     
     grepl(x = text_vector, pattern = "two")
-    
+```
+
+```
+## [1] FALSE FALSE FALSE FALSE FALSE
+```
+
+```r
     grepl(x = tolower(text_vector), pattern = "two")
+```
+
+```
+## [1] FALSE  TRUE FALSE FALSE FALSE
 ```
 ]]
 
@@ -958,13 +1174,13 @@ class: split-20
 
 .row[.content[.split-three[
 .column[.content.vmiddle.center[
-<img src="images/hexDPLYR.png" width="60%">
+&lt;img src="images/hexDPLYR.png" width="60%"&gt;
 ]]
 .column[.content.vmiddle.center[
-<img src="images/hexGGPLOT2.png" width="60%">
+&lt;img src="images/hexGGPLOT2.png" width="60%"&gt;
 ]]
 .column[.content.vmiddle.center[
-<img src="images/hexLUBRIDATE.png" width="60%">
+&lt;img src="images/hexLUBRIDATE.png" width="60%"&gt;
 ]]
 ]]]
 
@@ -994,7 +1210,7 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & Data Frames]
+.font4[Vectors, Matrices, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
@@ -1006,13 +1222,17 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[**Vectors**, Matrices, & Data Frames]
+.font4[**Vectors**, Matrices, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     y
-    
+```
+
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
 ```
 ]]
 
@@ -1026,15 +1246,26 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[**Vectors**, Matrices, & Data Frames]
+.font4[**Vectors**, Matrices, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    y
 
+```r
+    y
+```
+
+```
+##  [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
+```
+
+```r
     text_vector
 ```
+
+```
+## [1] "one"   "TWO"   "thrEe" "Four"  "fiVE"
+```
 ]]
 
 
@@ -1047,14 +1278,21 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, **Matrices**, & Data Frames]
+.font4[Vectors, **Matrices**, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    a <- matrix(1:6, ncol = 3, nrow = 2)
+
+```r
+    a &lt;- matrix(1:6, ncol = 3, nrow = 2)
 
     a
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
 ```
 ]]
 
@@ -1067,16 +1305,29 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, **Matrices**, & Data Frames]
+.font4[Vectors, **Matrices**, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    a <- matrix(1:6, ncol = 3, nrow = 2)
+
+```r
+    a &lt;- matrix(1:6, ncol = 3, nrow = 2)
 
     a
-    
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+```
+
+```r
     a[1,3]
+```
+
+```
+## [1] 5
 ```
 ]]
 
@@ -1090,18 +1341,37 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, **Matrices**, & Data Frames]
+.font4[Vectors, **Matrices**, &amp; Data Frames]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    a <- matrix(1:6, ncol = 3, nrow = 2)
+
+```r
+    a &lt;- matrix(1:6, ncol = 3, nrow = 2)
 
     a
-    
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+```
+
+```r
     a[1,3]
-    
+```
+
+```
+## [1] 5
+```
+
+```r
     a[,2]
+```
+
+```
+## [1] 3 4
 ```
 ]]
 
@@ -1114,14 +1384,21 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    my_first_df <- data.frame(x = 6:10, text_vector, stringsAsFactors = F)
+
+```r
+    my_first_df &lt;- data.frame(x = 6:10, text_vector, stringsAsFactors = F)
 
     str(my_first_df)
+```
+
+```
+## 'data.frame':	5 obs. of  2 variables:
+##  $ x          : int  6 7 8 9 10
+##  $ text_vector: chr  "one" "TWO" "thrEe" "Four" ...
 ```
 ]]
 
@@ -1136,17 +1413,35 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    my_first_df <- data.frame(x = 6:10, text_vector, stringsAsFactors = F)
+
+```r
+    my_first_df &lt;- data.frame(x = 6:10, text_vector, stringsAsFactors = F)
 
     str(my_first_df)
-    
+```
+
+```
+## 'data.frame':	5 obs. of  2 variables:
+##  $ x          : int  6 7 8 9 10
+##  $ text_vector: chr  "one" "TWO" "thrEe" "Four" ...
+```
+
+```r
     my_first_df
 ```
+
+```
+##    x text_vector
+## 1  6         one
+## 2  7         TWO
+## 3  8       thrEe
+## 4  9        Four
+## 5 10        fiVE
+```
 ]]
 
 
@@ -1158,12 +1453,17 @@ layout: false
 class: split-20
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
+
+```r
     my_first_df$x
+```
+
+```
+## [1]  6  7  8  9 10
 ```
 ]]
 
@@ -1177,14 +1477,25 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    my_first_df$x
 
+```r
+    my_first_df$x
+```
+
+```
+## [1]  6  7  8  9 10
+```
+
+```r
     my_first_df$x/2
+```
+
+```
+## [1] 3.0 3.5 4.0 4.5 5.0
 ```
 ]]
 
@@ -1198,16 +1509,29 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    my_first_df$x
 
+```r
+    my_first_df$x
+```
+
+```
+## [1]  6  7  8  9 10
+```
+
+```r
     my_first_df$x/2
-    
-    my_first_df$col3 <- my_first_df$x/2
+```
+
+```
+## [1] 3.0 3.5 4.0 4.5 5.0
+```
+
+```r
+    my_first_df$col3 &lt;- my_first_df$x/2
 ```
 ]]
 
@@ -1221,17 +1545,36 @@ class: split-20
 count: false
 
 .row.bg-main1[.content.vmiddle.center[
-.font4[Vectors, Matrices, & **Data Frames**]
+.font4[Vectors, Matrices, &amp; **Data Frames**]
 ]]
 
 .row.bg-black[.content.left[
-```{r}
-    my_first_df$x
 
+```r
+    my_first_df$x
+```
+
+```
+## [1]  6  7  8  9 10
+```
+
+```r
     my_first_df$x/2
-    
-    my_first_df$col3 <- my_first_df$x/2
+```
+
+```
+## [1] 3.0 3.5 4.0 4.5 5.0
+```
+
+```r
+    my_first_df$col3 &lt;- my_first_df$x/2
     my_first_df[1:2,]
+```
+
+```
+##   x text_vector col3
+## 1 6         one  3.0
+## 2 7         TWO  3.5
 ```
 ]]
 
@@ -1265,7 +1608,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/hexPIPE.png" width="30%">
+&lt;img src="images/hexPIPE.png" width="30%"&gt;
 ]]
 
 ???
@@ -1281,7 +1624,8 @@ class: split-20
 ]]
 
 .row.bg-black[.content.left[
-```{r message=FALSE}
+
+```r
     library(dplyr)
 ```
 ]]
@@ -1299,12 +1643,23 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r message=FALSE}
+
+```r
     library(dplyr)
 ```
-```{r}
+
+```r
     my_first_df
 ```
+
+```
+##    x text_vector col3
+## 1  6         one  3.0
+## 2  7         TWO  3.5
+## 3  8       thrEe  4.0
+## 4  9        Four  4.5
+## 5 10        fiVE  5.0
+```
 ]]
 
 ???
@@ -1320,35 +1675,23 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r message=FALSE}
+
+```r
     library(dplyr)
 ```
-```{r}
-    my_first_df %>% 
+
+```r
+    my_first_df %&gt;% 
           mutate(NewCol = paste(x, "-", text_vector, sep=" ")) 
 ```
-]]
 
-???
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Pipe]
-]]
-
-.row.bg-black[.content.left[
-```{r message=FALSE}
-    library(dplyr)
 ```
-```{r}
-    my_first_df %>% 
-          mutate(NewCol = paste(x, "-", text_vector, sep=" ")) %>% 
-          filter(x > 7.25) 
+##    x text_vector col3    NewCol
+## 1  6         one  3.0   6 - one
+## 2  7         TWO  3.5   7 - TWO
+## 3  8       thrEe  4.0 8 - thrEe
+## 4  9        Four  4.5  9 - Four
+## 5 10        fiVE  5.0 10 - fiVE
 ```
 ]]
 
@@ -1365,14 +1708,55 @@ count: false
 ]]
 
 .row.bg-black[.content.left[
-```{r message=FALSE}
+
+```r
     library(dplyr)
 ```
-```{r}
-    my_first_df %>% 
-          mutate(NewCol = paste(x, "-", text_vector, sep=" ")) %>% 
-          filter(x > 7.25) %>% 
+
+```r
+    my_first_df %&gt;% 
+          mutate(NewCol = paste(x, "-", text_vector, sep=" ")) %&gt;% 
+          filter(x &gt; 7.25) 
+```
+
+```
+##    x text_vector col3    NewCol
+## 1  8       thrEe  4.0 8 - thrEe
+## 2  9        Four  4.5  9 - Four
+## 3 10        fiVE  5.0 10 - fiVE
+```
+]]
+
+???
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Pipe]
+]]
+
+.row.bg-black[.content.left[
+
+```r
+    library(dplyr)
+```
+
+```r
+    my_first_df %&gt;% 
+          mutate(NewCol = paste(x, "-", text_vector, sep=" ")) %&gt;% 
+          filter(x &gt; 7.25) %&gt;% 
           select(z = col3, NewCol)
+```
+
+```
+##     z    NewCol
+## 1 4.0 8 - thrEe
+## 2 4.5  9 - Four
+## 3 5.0 10 - fiVE
 ```
 ]]
 
@@ -1386,7 +1770,7 @@ background-size: cover
 
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_main.left[
-.font5[Supervised Learning]<br>
+.font5[Supervised Learning]&lt;br&gt;
 .font3[Decision Trees]]]
 .column[
 ]
@@ -1421,7 +1805,7 @@ class: split-20
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree0.png" width="75%">
+  &lt;img src="images/tree0.png" width="75%"&gt;
   ]]
 
 ---
@@ -1435,21 +1819,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree01.png" width="75%">
-  ]]
-  
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Supervised Learning: Decision Trees]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/tree02.png" width="75%">
+  &lt;img src="images/tree01.png" width="75%"&gt;
   ]]
   
 ---
@@ -1463,7 +1833,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree03.png" width="75%">
+  &lt;img src="images/tree02.png" width="75%"&gt;
   ]]
   
 ---
@@ -1477,21 +1847,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree04.png" width="75%">
-  ]]
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Supervised Learning: Decision Trees]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/tree05.png" width="75%">
+  &lt;img src="images/tree03.png" width="75%"&gt;
   ]]
   
 ---
@@ -1505,7 +1861,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree06.png" width="75%">
+  &lt;img src="images/tree04.png" width="75%"&gt;
   ]]
 
 ---
@@ -1519,35 +1875,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree07.png" width="75%">
-  ]]
-  
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Supervised Learning: Decision Trees]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/tree08.png" width="75%">
-  ]]
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Supervised Learning: Decision Trees]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/tree09.png" width="75%">
+  &lt;img src="images/tree05.png" width="75%"&gt;
   ]]
   
 ---
@@ -1561,7 +1889,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree10.png" width="75%">
+  &lt;img src="images/tree06.png" width="75%"&gt;
   ]]
 
 ---
@@ -1575,7 +1903,63 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/tree11.png" width="75%">
+  &lt;img src="images/tree07.png" width="75%"&gt;
+  ]]
+  
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Supervised Learning: Decision Trees]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/tree08.png" width="75%"&gt;
+  ]]
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Supervised Learning: Decision Trees]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/tree09.png" width="75%"&gt;
+  ]]
+  
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Supervised Learning: Decision Trees]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/tree10.png" width="75%"&gt;
+  ]]
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Supervised Learning: Decision Trees]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/tree11.png" width="75%"&gt;
   ]]
 
 
@@ -1588,7 +1972,7 @@ background-size: cover
 
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_main.left[
-.font5[Titanic]<br>
+.font5[Titanic]&lt;br&gt;
 .font3[Machine Learning from Disaster]]]
 .column[
 ]
@@ -1604,17 +1988,17 @@ class: split-20
 
 .row[.split-two[
   .column[.content.center[
-  [<img src="images/kaggle.png" width="55%">](https://www.kaggle.com/c/titanic)
+  [&lt;img src="images/kaggle.png" width="55%"&gt;](https://www.kaggle.com/c/titanic)
   # .RLadiesPurple[training.csv]
-  .RLadiesPurple[.font2[891 entries & 11 variables]]
-<br>
+  .RLadiesPurple[.font2[891 entries &amp; 11 variables]]
+&lt;br&gt;
   # .RLadiesPurple[test.csv]
-  .RLadiesPurple[.font2[418 entries & 10 variables]]
+  .RLadiesPurple[.font2[418 entries &amp; 10 variables]]
   ]]
   .column[.content.vmiddle.center[
-  # .RLadiesPurple[**GOAL**] <br>
+  # .RLadiesPurple[**GOAL**] &lt;br&gt;
   ### .RLadiesPurple[predict which of the Titanic's passengers survived]
-  <img src="https://media.giphy.com/media/voCR6kkAiVPm8/giphy.gif" width="100%">
+  &lt;img src="https://media.giphy.com/media/voCR6kkAiVPm8/giphy.gif" width="100%"&gt;
   ]]
 ]]
 
@@ -1652,15 +2036,17 @@ class: split-30 with-border
 
 .column[.split-two[
   .row.bg-black[.content.vmiddle.left[
-    ```{r message=FALSE}
+    
+    ```r
     library(tidyverse)
     library(rpart)
     library(rpart.plot)
     ```
   ]]
   .row.bg-black[.content.vmiddle.left[
-    ```{r message = FALSE}
-    titanic <- read_csv(file = "data/titanic_training.csv", col_names = TRUE)
+    
+    ```r
+    titanic &lt;- read_csv(file = "data/titanic_training.csv", col_names = TRUE)
     ```
   ]]
 ]]
@@ -1691,8 +2077,22 @@ class: split-10 with-border
   # Let's look at the data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   head(titanic)
+  ```
+  
+  ```
+  ## # A tibble: 6 x 12
+  ##   PassengerId Survived Pclass Name  Sex     Age SibSp Parch Ticket  Fare
+  ##         &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;
+  ## 1           1        0      3 Brau… male     22     1     0 A/5 2…  7.25
+  ## 2           2        1      1 Cumi… fema…    38     1     0 PC 17… 71.3 
+  ## 3           3        1      3 Heik… fema…    26     0     0 STON/…  7.92
+  ## 4           4        1      1 Futr… fema…    35     1     0 113803 53.1 
+  ## 5           5        0      3 Alle… male     35     0     0 373450  8.05
+  ## 6           6        0      3 Mora… male     NA     0     0 330877  8.46
+  ## # ... with 2 more variables: Cabin &lt;chr&gt;, Embarked &lt;chr&gt;
   ```
 ]]
 
@@ -1701,11 +2101,17 @@ class: split-10 with-border
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Pclass)
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##   1.000   2.000   3.000   2.309   3.000   3.000
   ```
 ]]
 
@@ -1715,15 +2121,29 @@ layout: false
 class: split-10 with-border
 count: false
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Pclass)
-  titanic$Pclass <- as.factor(titanic$Pclass)
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##   1.000   2.000   3.000   2.309   3.000   3.000
+  ```
+  
+  ```r
+  titanic$Pclass &lt;- as.factor(titanic$Pclass)
   
   summary(titanic$Pclass)
   ```
+  
+  ```
+  ##   1   2   3 
+  ## 216 184 491
+  ```
 ]]
 
 
@@ -1732,11 +2152,17 @@ count: false
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Survived)
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##  0.0000  0.0000  0.0000  0.3838  1.0000  1.0000
   ```
 ]]
 
@@ -1747,17 +2173,31 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Survived)
-  titanic$Survived <- if_else(condition = titanic$Survived == 1, 
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##  0.0000  0.0000  0.0000  0.3838  1.0000  1.0000
+  ```
+  
+  ```r
+  titanic$Survived &lt;- if_else(condition = titanic$Survived == 1, 
                                 true = "yes",
                                 false = "no")
   
   summary(titanic$Survived)
   ```
+  
+  ```
+  ##    Length     Class      Mode 
+  ##       891 character character
+  ```
 ]]
 
 ---
@@ -1765,11 +2205,17 @@ count: false
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Age)
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  ##    0.42   20.12   28.00   29.70   38.00   80.00     177
   ```
 ]]
 
@@ -1780,31 +2226,30 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   summary(titanic$Age)
-  titanic$Age <- if_else(condition = is.na(titanic$Age), 
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  ##    0.42   20.12   28.00   29.70   38.00   80.00     177
+  ```
+  
+  ```r
+  titanic$Age &lt;- if_else(condition = is.na(titanic$Age), 
                           true = mean(titanic$Age, na.rm = T), 
                           false = titanic$Age)
   
   summary(titanic$Age)
   ```
-]]
-
----
-
-layout: false
-class: split-10 with-border
-.row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
-]]
-.row.bg-black[.content.vtop.left[
-  ```{r}
-  titanic$Family <- titanic$SibSp + titanic$Parch
   
-  summary(titanic$Family)
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##    0.42   22.00   29.70   29.70   35.00   80.00
   ```
 ]]
 
@@ -1813,14 +2258,47 @@ class: split-10 with-border
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Tidy & Transform
+  # Tidy &amp; Transform
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
-  titanic <- titanic %>% 
-                select(Pclass, Sex, Age, Fare, Family, Survived)
+  
+  ```r
+  titanic$Family &lt;- titanic$SibSp + titanic$Parch
+  
+  summary(titanic$Family)
+  ```
+  
+  ```
+  ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  ##  0.0000  0.0000  0.0000  0.9046  1.0000 10.0000
+  ```
+]]
 
+---
+
+layout: false
+class: split-10 with-border
+.row.bg-main1[.content.vmiddle.left[
+  # Tidy &amp; Transform
+]]
+.row.bg-black[.content.vtop.left[
+  
+  ```r
+  titanic &lt;- titanic %&gt;% 
+                select(Pclass, Sex, Age, Fare, Family, Survived)
+  
   glimpse(titanic)
+  ```
+  
+  ```
+  ## Observations: 891
+  ## Variables: 6
+  ## $ Pclass   &lt;fct&gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2,...
+  ## $ Sex      &lt;chr&gt; "male", "female", "female", "female", "male", "male",...
+  ## $ Age      &lt;dbl&gt; 22.00000, 38.00000, 26.00000, 35.00000, 35.00000, 29....
+  ## $ Fare     &lt;dbl&gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51....
+  ## $ Family   &lt;int&gt; 1, 1, 0, 1, 0, 0, 0, 4, 2, 1, 2, 0, 0, 6, 0, 0, 5, 0,...
+  ## $ Survived &lt;chr&gt; "no", "yes", "yes", "yes", "no", "no", "no", "no", "y...
   ```
 ]]
 
@@ -1832,11 +2310,14 @@ class: split-10 with-border
   # Model
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r fig.show("hold")}
-  tree.titanic <- rpart(formula = Survived ~ ., data = titanic)
+  
+  ```r
+  tree.titanic &lt;- rpart(formula = Survived ~ ., data = titanic)
   
   rpart.plot(tree.titanic, fallen.leaves = F)
   ```
+  
+  ![](ML_slides_files/figure-html/fig.show("hold")-1.png)&lt;!-- --&gt;
 ]]
 
 ---
@@ -1845,11 +2326,11 @@ layout: false
 class: split-10 with-border
 
 .row.bg-main1[.content.vmiddle.left[
- # Visualise & Communicate
+ # Visualise &amp; Communicate
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/treePlot.png" width="60%">
+&lt;img src="images/treePlot.png" width="60%"&gt;
 ]]
 
 ---
@@ -1862,7 +2343,7 @@ class: split-10 with-border
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/rose0.png" width="60%">
+&lt;img src="images/rose0.png" width="60%"&gt;
 ]]
 
 ---
@@ -1876,7 +2357,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/rose1.png" width="60%">
+&lt;img src="images/rose1.png" width="60%"&gt;
 ]]
 
 ---
@@ -1890,7 +2371,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/rose2.png" width="60%">
+&lt;img src="images/rose2.png" width="60%"&gt;
 ]]
 
 ---
@@ -1903,7 +2384,7 @@ class: split-10 with-border
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/jack0.png" width="60%">
+&lt;img src="images/jack0.png" width="60%"&gt;
 ]]
 
 ---
@@ -1917,7 +2398,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/jack1.png" width="60%">
+&lt;img src="images/jack1.png" width="60%"&gt;
 ]]
 
 ---
@@ -1931,7 +2412,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/jack2.png" width="60%">
+&lt;img src="images/jack2.png" width="60%"&gt;
 ]]
 
 ---
@@ -1945,7 +2426,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/jack3.png" width="60%">
+&lt;img src="images/jack3.png" width="60%"&gt;
 ]]
 
 ---
@@ -1955,11 +2436,11 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
- # But we all know that Jack could have survived`r anicon::faa("angry", animate="burst", colour="red")`
+ # But we all know that Jack could have survived<span>&lt;i class="fas  fa-angry faa-burst animated " style=" color:red;"&gt;&lt;/i&gt;</span>
 ]]
 
 .row[.content.vmiddle.center[
-<img src="images/two.jpg" width="50%">
+&lt;img src="images/two.jpg" width="50%"&gt;
 ]]
 
 ---
@@ -1967,12 +2448,13 @@ count: false
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r message = FALSE}
+  
+  ```r
   # Import the test.csv file
-  titanic.test <- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
+  titanic.test &lt;- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
   ```
 ]]
 
@@ -1983,15 +2465,16 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r message = FALSE}
+  
+  ```r
   # Import the test.csv file
-  titanic.test <- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
+  titanic.test &lt;- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
   
   # Convert the Passenger Class to a factor
-  titanic.test$Pclass <- as.factor(titanic.test$Pclass)
+  titanic.test$Pclass &lt;- as.factor(titanic.test$Pclass)
   ```
 ]]
 
@@ -2002,18 +2485,19 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r message = FALSE}
+  
+  ```r
   # Import the test.csv file
-  titanic.test <- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
+  titanic.test &lt;- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
   
   # Convert the Passenger Class to a factor
-  titanic.test$Pclass <- as.factor(titanic.test$Pclass)
+  titanic.test$Pclass &lt;- as.factor(titanic.test$Pclass)
   
   # Tidy the missing Age observations
-  titanic.test$Age <- if_else(is.na(titanic.test$Age), 
+  titanic.test$Age &lt;- if_else(is.na(titanic.test$Age), 
                                 mean(titanic$Age, na.rm = T),   
                                 titanic.test$Age)
   ```
@@ -2026,53 +2510,55 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r message = FALSE}
+  
+  ```r
   # Import the test.csv file
-  titanic.test <- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
+  titanic.test &lt;- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
   
   # Convert the Passenger Class to a factor
-  titanic.test$Pclass <- as.factor(titanic.test$Pclass)
+  titanic.test$Pclass &lt;- as.factor(titanic.test$Pclass)
   
   # Tidy the missing Age observations
-  titanic.test$Age <- if_else(is.na(titanic.test$Age), 
-                                mean(titanic$Age, na.rm = T),   
-                                titanic.test$Age)
-  
-  # Create the Family variable
-  titanic.test$Family <- titanic.test$SibSp + titanic.test$Parch
-  ```
-]]
-
----
-
-layout: false
-class: split-10 with-border
-count: false
-
-.row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
-]]
-.row.bg-black[.content.vtop.left[
-  ```{r message = FALSE}
-  # Import the test.csv file
-  titanic.test <- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
-  
-  # Convert the Passenger Class to a factor
-  titanic.test$Pclass <- as.factor(titanic.test$Pclass)
-  
-  # Tidy the missing Age observations
-  titanic.test$Age <- if_else(is.na(titanic.test$Age), 
+  titanic.test$Age &lt;- if_else(is.na(titanic.test$Age), 
                                 mean(titanic$Age, na.rm = T),   
                                 titanic.test$Age)
   
   # Create the Family variable
-  titanic.test$Family <- titanic.test$SibSp + titanic.test$Parch
+  titanic.test$Family &lt;- titanic.test$SibSp + titanic.test$Parch
+  ```
+]]
+
+---
+
+layout: false
+class: split-10 with-border
+count: false
+
+.row.bg-main1[.content.vmiddle.left[
+  # Import, Tidy, &amp; Transform the Test Data
+]]
+.row.bg-black[.content.vtop.left[
+  
+  ```r
+  # Import the test.csv file
+  titanic.test &lt;- read_csv(file = "data/titanic_test.csv", col_names = TRUE)
+  
+  # Convert the Passenger Class to a factor
+  titanic.test$Pclass &lt;- as.factor(titanic.test$Pclass)
+  
+  # Tidy the missing Age observations
+  titanic.test$Age &lt;- if_else(is.na(titanic.test$Age), 
+                                mean(titanic$Age, na.rm = T),   
+                                titanic.test$Age)
+  
+  # Create the Family variable
+  titanic.test$Family &lt;- titanic.test$SibSp + titanic.test$Parch
   
   # Grab the variables we originally used
-  titanic.test <- titanic.test %>%
+  titanic.test &lt;- titanic.test %&gt;%
                     select(PassengerId, Pclass, Sex, Age, Fare, Family)
   ```
 ]]
@@ -2082,13 +2568,19 @@ count: false
 layout: false
 class: split-10 with-border
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
-  titanic.test$Predict <- predict(tree.titanic, titanic.test, type = "class")
+  
+  ```r
+  titanic.test$Predict &lt;- predict(tree.titanic, titanic.test, type = "class")
   
   summary(titanic.test$Predict)
+  ```
+  
+  ```
+  ##  no yes 
+  ## 284 134
   ```
 ]]
 
@@ -2099,17 +2591,25 @@ class: split-10 with-border
 count: false
 
 .row.bg-main1[.content.vmiddle.left[
-  # Import, Tidy, & Transform the Test Data
+  # Import, Tidy, &amp; Transform the Test Data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
-  titanic.test$Predict <- predict(tree.titanic, titanic.test, type = "class")
+  
+  ```r
+  titanic.test$Predict &lt;- predict(tree.titanic, titanic.test, type = "class")
   
   summary(titanic.test$Predict)
+  ```
   
-  titanic.test$Survived <- if_else(titanic.test$Predict == "yes", 1, 0)
+  ```
+  ##  no yes 
+  ## 284 134
+  ```
   
-  titanic.submit <- titanic.test %>% 
+  ```r
+  titanic.test$Survived &lt;- if_else(titanic.test$Predict == "yes", 1, 0)
+  
+  titanic.submit &lt;- titanic.test %&gt;% 
                       select(PassengerId, Survived)
   
   
@@ -2128,8 +2628,8 @@ count: false
 ]]
 
 .row[.content.center[
-<img src="images/kaggle.png" width="20%"><br>
-<img src="images/kaggleleaderboard.png" width="60%">
+&lt;img src="images/kaggle.png" width="20%"&gt;&lt;br&gt;
+&lt;img src="images/kaggleleaderboard.png" width="60%"&gt;
 ]]
 
 ---
@@ -2140,7 +2640,7 @@ background-size: cover
 
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_main.left[
-.font5[Unsupervised Learning]<br>
+.font5[Unsupervised Learning]&lt;br&gt;
 .font3[k-Means Clustering]]]
 .column[
 ]
@@ -2157,7 +2657,7 @@ class: split-20
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans01.png" width="75%">
+  &lt;img src="images/kmeans01.png" width="75%"&gt;
   ]]
   
 ---
@@ -2171,7 +2671,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans02.png" width="75%">
+  &lt;img src="images/kmeans02.png" width="75%"&gt;
   ]]
   
 ---
@@ -2185,7 +2685,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans03.png" width="75%">
+  &lt;img src="images/kmeans03.png" width="75%"&gt;
   ]]
 
 ---
@@ -2199,35 +2699,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans04.png" width="75%">
-  ]]
-  
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Unsupervised Learning: k-Means Clustering]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/kmeans05.png" width="75%">
-  ]]
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Unsupervised Learning: k-Means Clustering]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/kmeans06.png" width="75%">
+  &lt;img src="images/kmeans04.png" width="75%"&gt;
   ]]
   
 ---
@@ -2241,7 +2713,21 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans07.png" width="75%">
+  &lt;img src="images/kmeans05.png" width="75%"&gt;
+  ]]
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Unsupervised Learning: k-Means Clustering]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/kmeans06.png" width="75%"&gt;
   ]]
   
 ---
@@ -2255,7 +2741,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans08.png" width="75%">
+  &lt;img src="images/kmeans07.png" width="75%"&gt;
   ]]
   
 ---
@@ -2269,21 +2755,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans09.png" width="75%">
-  ]]
-
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Unsupervised Learning: k-Means Clustering]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/kmeans10.png" width="75%">
+  &lt;img src="images/kmeans08.png" width="75%"&gt;
   ]]
   
 ---
@@ -2297,7 +2769,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans11.png" width="75%">
+  &lt;img src="images/kmeans09.png" width="75%"&gt;
   ]]
 
 ---
@@ -2311,21 +2783,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans12.png" width="75%">
-  ]]
-  
----
-
-layout: false
-class: split-20
-count: false
-
-.row.bg-main1[.content.vmiddle.center[
-.font4[Unsupervised Learning: k-Means Clustering]
-]]
-
-.row[.content.vmiddle.center[
-  <img src="images/kmeans12.5.png" width="75%">
+  &lt;img src="images/kmeans10.png" width="75%"&gt;
   ]]
   
 ---
@@ -2339,7 +2797,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans13.png" width="75%">
+  &lt;img src="images/kmeans11.png" width="75%"&gt;
   ]]
 
 ---
@@ -2353,7 +2811,7 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans14.png" width="75%">
+  &lt;img src="images/kmeans12.png" width="75%"&gt;
   ]]
   
 ---
@@ -2367,7 +2825,49 @@ count: false
 ]]
 
 .row[.content.vmiddle.center[
-  <img src="images/kmeans15.png" width="75%">
+  &lt;img src="images/kmeans12.5.png" width="75%"&gt;
+  ]]
+  
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Unsupervised Learning: k-Means Clustering]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/kmeans13.png" width="75%"&gt;
+  ]]
+
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Unsupervised Learning: k-Means Clustering]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/kmeans14.png" width="75%"&gt;
+  ]]
+  
+---
+
+layout: false
+class: split-20
+count: false
+
+.row.bg-main1[.content.vmiddle.center[
+.font4[Unsupervised Learning: k-Means Clustering]
+]]
+
+.row[.content.vmiddle.center[
+  &lt;img src="images/kmeans15.png" width="75%"&gt;
   ]]
 
 ---
@@ -2379,7 +2879,7 @@ background-size: cover
 
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_main.left[
-.font5[NYC Taxi]<br>
+.font5[NYC Taxi]&lt;br&gt;
 .font3[Machine Learning from Disaster]]]
 .column[
 ]
@@ -2395,19 +2895,19 @@ class: split-20
 
 .row[.split-two[
   .column[.content.center[
-  [<img src="images/kaggle.png" width="55%">](https://www.kaggle.com/c/titanic)
+  [&lt;img src="images/kaggle.png" width="55%"&gt;](https://www.kaggle.com/c/titanic)
   # .RLadiesPurple[taxi.csv]
-  .RLadiesPurple[.font2[9150 entries & 10 variables]]
+  .RLadiesPurple[.font2[9150 entries &amp; 10 variables]]
   ]]
   .column[.content.vmiddle.center[
-  # .RLadiesPurple[**GOAL**] <br>
+  # .RLadiesPurple[**GOAL**] &lt;br&gt;
   ### .RLadiesPurple[find locations for **five** Manhattan taxi stands]
-  <img src="https://media.giphy.com/media/xUNd9Gxq7Ke9TLQfBu/giphy.gif" width="80%">
+  &lt;img src="https://media.giphy.com/media/xUNd9Gxq7Ke9TLQfBu/giphy.gif" width="80%"&gt;
   ]]
 ]]
 
 ???
-pickup date & time
+pickup date &amp; time
 pick up long
 pick up lat
 dropoff long
@@ -2443,13 +2943,15 @@ class: split-30 with-border
 
 .column[.split-two[
   .row.bg-black[.content.vmiddle.left[
-    ```{r message=FALSE}
+    
+    ```r
     library(tidyverse)
     ```
   ]]
   .row.bg-black[.content.vmiddle.left[
-    ```{r message = FALSE}
-    taxi <- read_csv("data/NYCtaxi.csv")
+    
+    ```r
+    taxi &lt;- read_csv("data/NYCtaxi.csv")
     ```
   ]]
 ]]
@@ -2480,8 +2982,24 @@ class: split-10 with-border
   # Let's look at the data
 ]]
 .row.bg-black[.content.vtop.left[
-  ```{r}
+  
+  ```r
   glimpse(taxi)
+  ```
+  
+  ```
+  ## Observations: 9,150
+  ## Variables: 10
+  ## $ key               &lt;dttm&gt; 2015-01-27 13:08:24, 2015-01-27 13:08:24, 2...
+  ## $ pickup_datetime   &lt;chr&gt; "2015-01-27 13:08:24 UTC", "2015-01-27 13:08...
+  ## $ pickup_longitude  &lt;dbl&gt; -73.97332, -73.98686, -73.98252, -73.98116, ...
+  ## $ pickup_latitude   &lt;dbl&gt; 40.76381, 40.71938, 40.75126, 40.76781, 40.7...
+  ## $ dropoff_longitude &lt;dbl&gt; -73.98143, -73.99889, -73.97965, -73.99045, ...
+  ## $ dropoff_latitude  &lt;dbl&gt; 40.74384, 40.73920, 40.74614, 40.75164, 40.7...
+  ## $ passenger_count   &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+  ## $ boroughCode       &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+  ## $ borough           &lt;chr&gt; "Manhattan", "Manhattan", "Manhattan", "Manh...
+  ## $ X.id              &lt;chr&gt; "http://nyc.pediacities.com/Resource/Borough...
   ```
 ]]
 
@@ -2494,10 +3012,13 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r fig.align='center', fig.height=6.5, fig.width=6.5}
+  
+  ```r
   ggplot() + geom_point(data = taxi, 
                         mapping = aes(x = pickup_latitude, y = pickup_longitude))
-```
+  ```
+  
+  &lt;img src="ML_slides_files/figure-html/unnamed-chunk-65-1.png" style="display: block; margin: auto;" /&gt;
 ]]
 
 ---
@@ -2510,21 +3031,45 @@ class: split-10 with-border
 
 .row.bg-black[.split-two[
 .column[.content.left[
-  ```{r}
-  taxi_points <- taxi %>% 
+  
+  ```r
+  taxi_points &lt;- taxi %&gt;% 
                   select(lng = pickup_longitude, 
                          lat = pickup_latitude)
   
   head(taxi_points)
   ```
+  
+  ```
+  ## # A tibble: 6 x 2
+  ##     lng   lat
+  ##   &lt;dbl&gt; &lt;dbl&gt;
+  ## 1 -74.0  40.8
+  ## 2 -74.0  40.7
+  ## 3 -74.0  40.8
+  ## 4 -74.0  40.8
+  ## 5 -74.0  40.8
+  ## 6 -74.0  40.8
+  ```
 ]]
 .column[.content.left[
-  ```{r}
-  taxi_matrix <- taxi_points %>% 
+  
+  ```r
+  taxi_matrix &lt;- taxi_points %&gt;% 
                   data.matrix()
   
   
   head(taxi_matrix)
+  ```
+  
+  ```
+  ##            lng      lat
+  ## [1,] -73.97332 40.76381
+  ## [2,] -73.98686 40.71938
+  ## [3,] -73.98252 40.75126
+  ## [4,] -73.98116 40.76781
+  ## [5,] -73.96605 40.78977
+  ## [6,] -73.96098 40.76555
   ```
 ]]
 ]]
@@ -2552,12 +3097,30 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r}
-  clusterList <- kmeans(x = taxi_matrix, 
+  
+  ```r
+  clusterList &lt;- kmeans(x = taxi_matrix, 
                         centers = 5)
                         
   glimpse(clusterList)
-```
+  ```
+  
+  ```
+  ## List of 9
+  ##  $ cluster     : int [1:9150] 4 2 4 4 3 4 3 5 4 2 ...
+  ##  $ centers     : num [1:5, 1:2] -74 -74 -74 -74 -74 ...
+  ##   ..- attr(*, "dimnames")=List of 2
+  ##   .. ..$ : chr [1:5] "1" "2" "3" "4" ...
+  ##   .. ..$ : chr [1:2] "lng" "lat"
+  ##  $ totss       : num 6.64
+  ##  $ withinss    : num [1:5] 0.158 0.131 0.432 0.323 0.143
+  ##  $ tot.withinss: num 1.19
+  ##  $ betweenss   : num 5.45
+  ##  $ size        : int [1:5] 1814 1552 1744 2806 1234
+  ##  $ iter        : int 6
+  ##  $ ifault      : int 0
+  ##  - attr(*, "class")= chr "kmeans"
+  ```
 ]]
 
 ---
@@ -2569,12 +3132,21 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r}
-  taxi_points <- taxi_points %>% 
+  
+  ```r
+  taxi_points &lt;- taxi_points %&gt;% 
                     mutate(cluster = as.factor(clusterList$cluster))
                     
   glimpse(taxi_points)
-```
+  ```
+  
+  ```
+  ## Observations: 9,150
+  ## Variables: 3
+  ## $ lng     &lt;dbl&gt; -73.97332, -73.98686, -73.98252, -73.98116, -73.96605,...
+  ## $ lat     &lt;dbl&gt; 40.76381, 40.71938, 40.75126, 40.76781, 40.78977, 40.7...
+  ## $ cluster &lt;fct&gt; 4, 2, 4, 4, 3, 4, 3, 5, 4, 2, 1, 2, 4, 2, 1, 5, 3, 4, ...
+  ```
 ]]
 
 ---
@@ -2586,11 +3158,12 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r }
-  myPlot <- ggplot() + 
+  
+  ```r
+  myPlot &lt;- ggplot() + 
               geom_point(data = taxi_points, 
                          mapping = aes(x = lng, y = lat, color = cluster))
-```
+  ```
 ]]
 
 ---
@@ -2602,9 +3175,12 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r fig.align='center', fig.height=6.5, fig.width=6.5}
+  
+  ```r
   myPlot
-```
+  ```
+  
+  &lt;img src="ML_slides_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" /&gt;
 ]]
 
 ---
@@ -2616,12 +3192,13 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r}
-  myPlot <- myPlot + geom_point(data = data.frame(clusterList$centers), 
+  
+  ```r
+  myPlot &lt;- myPlot + geom_point(data = data.frame(clusterList$centers), 
                                 mapping = aes(x = lng, y = lat),
                                 shape = 17,
                                 size = 4)
-```
+  ```
 ]]
 
 ---
@@ -2633,9 +3210,12 @@ class: split-10 with-border
 ]]
 .row.bg-black[
 .content.vtop.left[
-  ```{r fig.align='center', fig.height=6.5, fig.width=6.5}
+  
+  ```r
   myPlot
-```
+  ```
+  
+  &lt;img src="ML_slides_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" /&gt;
 ]]
 
 ---
@@ -2661,8 +3241,8 @@ class: split-20 with-border
 ]]
 
 .row.bg-main1[.content.vmiddle.center[
-.font5[Hailing taxis!]<br>
-  <img src="https://media.giphy.com/media/39fj7g99qyD72/giphy.gif" width="45%">
+.font5[Hailing taxis!]&lt;br&gt;
+  &lt;img src="https://media.giphy.com/media/39fj7g99qyD72/giphy.gif" width="45%"&gt;
 ]]
 
 ---
@@ -2675,11 +3255,60 @@ background-size: cover
 .column.slide-in-left[
 .sliderbox.vmiddle.shade_Icepackblue.left[
   .font5[Gemma Dawson]
-    <img src="images/icepack_white.png" width="70%"><br>
+    &lt;img src="images/icepack_white.png" width="70%"&gt;&lt;br&gt;
 ]]
 
 .column[.content.vmiddle.right[
-### .Icepackblue[`r anicon::faa("laptop", animate="float")`  www.icepack.ai]
-### .Icepackblue[`r anicon::faa("github", animate="float")`  @GemmaDawson]
-### .Icepackblue[`r anicon::faa("twitter", animate="float")`  @gemmadawsonza]
+### .Icepackblue[<span>&lt;i class="fas  fa-laptop faa-float animated "&gt;&lt;/i&gt;</span>  www.icepack.ai]
+### .Icepackblue[<span>&lt;i class="fab  fa-github faa-float animated "&gt;&lt;/i&gt;</span>  @GemmaDawson]
+### .Icepackblue[<span>&lt;i class="fab  fa-twitter faa-float animated "&gt;&lt;/i&gt;</span>  @gemmadawsonza]
 ]]
+    </textarea>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
