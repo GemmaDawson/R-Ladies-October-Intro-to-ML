@@ -28,6 +28,7 @@
   --color-black: #000;
   --color-Icepackblue: #283848;
   --color-RLadiesPurple: #562457;
+  --color-ORSSAred: #AC1F30;
 }
 
 
@@ -93,6 +94,7 @@
 .bg-black { background-color: var(--color-black); }
 .bg-Icepackblue { background-color: var(--color-Icepackblue); }
 .bg-RLadiesPurple { background-color: var(--color-RLadiesPurple); }
+.bg-ORSSARed { background-color: var(--color-ORSSAred); }
 
 /*********** color ***********/
 .red { color: var(--color-red); }
@@ -118,6 +120,7 @@
 .black { color: var(--color-black); }
 .Icepackblue {color: var(--color-Icepackblue); }
 .RLadiesPurple {color: var(--color-RLadiesPurple); }
+.ORSSARed{color: var(--color-ORSSAred); }
 
 /*********** border-color ***********/
 .border-red>.column:nth-of-type(n+2){ border-left-color: var(--color-red); }
